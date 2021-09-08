@@ -1,0 +1,161 @@
+// .main__skils {
+// }
+.skils {
+  background-color: $darcWhite;
+}
+// .shils__heading {
+// }
+// .skils__title {
+// }
+// .scetion-title {
+// }
+// .skils__subtitle {
+// }
+// .scetion-subtitle {
+// }
+// .skils__body {
+// }
+// ._body {
+// }
+.skils__list {
+  @include dFlexCenter;
+  flex-wrap: wrap;
+}
+.skils__item {
+  position: relative;
+  flex: auto;
+  margin: 5px;
+  padding: 40px 30px;
+  text-align: center;
+  background-color: $white;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $brightBlac;
+    opacity: 0;
+    visibility: hidden;
+    transition: $shortDelay;
+    user-select: none;
+  }
+  @media screen and (max-width: 599px) {
+    padding: 20px 15px;
+  }
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        opacity: 1;
+        visibility: visible;
+        user-select: auto;
+      }
+      .skils__link_go-over {
+        bottom: 15px;
+        z-index: 2;
+        opacity: 1;
+        visibility: visible;
+        user-select: auto;
+      }
+    }
+  }
+  @media screen and (hover: none) {
+    &._focuses {
+      &::after {
+        opacity: 1;
+        visibility: visible;
+        user-select: auto;
+      }
+      .skils__link_go-over {
+        bottom: 15px;
+        z-index: 2;
+        opacity: 1;
+        visibility: visible;
+        user-select: auto;
+      }
+    }
+  }
+}
+.skils__name {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $dark;
+  @media screen and (max-width: 599px) {
+    font-size: calc(10px + 20 * (100vw / 599));
+  }
+}
+.skils__icon {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  user-select: none;
+  @media screen and (max-width: 599px) {
+    width: 65%;
+    height: 65%;
+  }
+  @media screen and (max-width: 320px) {
+    width: 90%;
+    height: 90%;
+  }
+}
+// .skils__img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: contain;
+//   object-position: center;
+// }
+// .img {
+// }
+.skils__link_go-over {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  @include dFlexCenter;
+  padding: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $white;
+  opacity: 0;
+  visibility: hidden;
+  transition: $shortDelayAndTransition;
+  user-select: none;
+  i {
+    margin-left: 10px;
+    font-size: 15px;
+    transition: $shortDelay;
+  }
+  @media (hover: hover) {
+    &:hover {
+      i {
+        color: $navyBlue;
+      }
+    }
+  }
+  @media screen and (max-width: 599px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 320px) {
+    bottom: -10px;
+    right: 10px;
+    &,
+    i {
+      font-size: calc(0px + 15 * (100vw / 320));
+    }
+  }
+}
+// .html-skil {
+// }
+// .css-skil {
+// }
+// .scss-skil {
+// }
+// .js-skil {
+// }
+// .ts-skil {
+// }
+// .git-skil {
+// }

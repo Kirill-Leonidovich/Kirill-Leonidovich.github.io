@@ -1,0 +1,24 @@
+{
+  "name": "kirill-leonidovich.github.io",
+  "version": "1.0.0",
+  "description": "\"partfolio javascript frontend projects\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/scripts/form/mailer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirill-Leonidovich/Kirill-Leonidovich.github.io.git"
+  },
+  "author": "Kirill Alkhimenok <kirillalhi@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirill-Leonidovich/Kirill-Leonidovich.github.io/issues"
+  },
+  "homepage": "https://github.com/Kirill-Leonidovich/Kirill-Leonidovich.github.io#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "nodemailer": "^6.6.3"
+  }
+}

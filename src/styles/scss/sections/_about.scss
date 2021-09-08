@@ -1,0 +1,111 @@
+// .main_about {
+// }
+.about {
+  background-color: $white;
+}
+// .about__conteiner {
+// }
+// ._conteiner {
+// }
+// .about__body {
+// }
+// ._body {
+// }
+// .about__heading {
+// }
+// .section-heading {
+// }
+// .about__title {
+// }
+// .scetion-title {
+// }
+// .about__subtitle {
+// }
+// .scetion-subtitle {
+// }
+// .about__info {
+// }
+.info {
+  @include dFlexBetween;
+  align-items: center;
+  @media screen and (max-width: 599px) {
+    flex-direction: column-reverse;
+  }
+}
+.info__description {
+  @include removeMB;
+}
+// .info__name {
+// }
+// .info__city {
+// }
+// .info__age {
+// }
+// .info__work {
+// }
+.autor-info {
+  @include dFlexStart;
+  align-items: center;
+  margin-bottom: $from20to35px;
+  font-size: $from15to25px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: $navyBlue;
+  border-radius: 50px;
+  transition: $shortDelay;
+  @media (hover: hover) {
+    &:hover {
+      background-color: $navyBlue;
+      .autor-info__text {
+        color: $white;
+      }
+    }
+  }
+  @media screen and (max-width: 599px) {
+    text-align: center;
+    justify-content: center;
+  }
+}
+.autor-info__icon {
+  @include dFlexCenter;
+  min-width: $from30to50px;
+  min-height: $from30to50px;
+  background-color: $navyBlue;
+  padding-left: 2px;
+  font-size: $from10to20px;
+  color: $darcWhite;
+  border-radius: 100%;
+  transition: $shortDelay;
+  @media screen and (max-width: 599px) {
+    display: none;
+  }
+}
+.autor-info__text {
+  padding: 0 15px;
+  transition: $shortDelay;
+  @media screen and (max-width: 599px) {
+    font-weight: 400;
+  }
+}
+// .info__photo {
+// }
+.photo-autor {
+  width: calc(150px + 150 * ((100vw - 599px) / 1000));
+  height: calc(350px + 150 * ((100vw - 599px) / 1000));
+  background-color: $gray;
+  overflow: hidden;
+  user-select: none;
+  @media screen and (max-width: 599px) {
+    width: calc(0px + 300 * (100vw / 599));
+    height: calc(0px + 300 * (100vw / 599));
+    margin-bottom: calc(0px + 50 * (100vw / 599));
+    border-radius: 100%;
+  }
+}
+.photo-autor__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% 50%;  
+}
