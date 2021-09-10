@@ -72,7 +72,7 @@
   @media (max-width: 992px) {
     padding-right: 40px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 599px) {
     font-size: calc(5px + 24 * (100vw / 500));
   }
 }
@@ -91,20 +91,27 @@
   @media (max-width: 992px) {
     @include dFlexBetween;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 599px) {
     flex-direction: column;
   }
 }
 .modal__link {
+  margin: 0 10px;
   padding: 5px 15px;
   font-size: $from15to25px;
   color: $white;
   background-color: $navyBlue;
   text-transform: uppercase;
   border-radius: 5px;
-  @media (max-width: 500px) {
+  transition: $shortDelay;
+  @media (max-width: 599px) {
     margin: 5px 0;
     padding: 10px;
+  }
+  @media (hover: hover) {
+    &:hover {
+      background-color: $blue;
+    }
   }
 }
 // ._link-github {

@@ -1069,7 +1069,7 @@ h6 {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 599px) {
   .modal__name {
     font-size: calc(5px + 24 * (100vw / 500));
   }
@@ -1102,7 +1102,7 @@ h6 {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 599px) {
   .modal__buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1112,18 +1112,27 @@ h6 {
 }
 
 .modal__link {
+  margin: 0 10px;
   padding: 5px 15px;
   font-size: calc(15px + 10 * ((100vw - 320px) / 1000));
   color: #ffffff;
   background-color: #10425f;
   text-transform: uppercase;
   border-radius: 5px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 599px) {
   .modal__link {
     margin: 5px 0;
     padding: 10px;
+  }
+}
+
+@media (hover: hover) {
+  .modal__link:hover {
+    background-color: #6b97b1;
   }
 }
 
@@ -1249,6 +1258,8 @@ h6 {
   color: #ffffff;
   background-color: #10425f;
   border-radius: 5px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 @media (max-width: 599px) {
@@ -1256,6 +1267,12 @@ h6 {
     width: 100%;
     padding: 20px;
     font-size: calc(5px + 15 * (100vw / 599));
+  }
+}
+
+@media (hover: hover) {
+  .from__btn_submit:hover {
+    background-color: #6b97b1;
   }
 }
 
