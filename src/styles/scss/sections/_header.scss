@@ -57,8 +57,9 @@
 .header__artilce {
   margin-bottom: $from10to20px;
 }
-// .header__massage_autor {
-// }
+.header__massage_autor {
+  @include adaptiveMBfrom40to60;
+}
 // .massage-autor {
 // }
 // .massage-autor__item {

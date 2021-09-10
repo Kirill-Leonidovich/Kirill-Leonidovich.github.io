@@ -127,7 +127,7 @@ $from10to20px: calc(10px + 10 * ((100vw - 320px) / 1000));
 .massage-autor {
   @include dFlexCenter;
   flex-wrap: wrap;
-  @include adaptiveMBfrom40to60;
+  // @include adaptiveMBfrom40to60;
   // .massage-autor__item {
   // }
   .massage-autor__link {

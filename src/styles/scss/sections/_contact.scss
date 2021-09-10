@@ -22,8 +22,9 @@
 // }
 // .scetion-subtitle {
 // }
-// .contact__massage_autor {
-// }
+.contact__massage_autor {
+  @include adaptiveMBfrom40to60;
+}
 // .massage-autor {
 // }
 // .massage-autor__item {
@@ -110,8 +111,8 @@
   height: 150px;
   resize: vertical;
   @media (max-width: 599px) {
-    min-height: 60px;
-    height: 80px;
+    min-height: 80px;
+    height: 140px;
   }
 }
 .from__btn_submit {
@@ -124,6 +125,7 @@
   border-radius: 5px;
   @media (max-width: 599px) {
     width: 100%;
+    padding: 20px;
     font-size: calc(5px + 15 * (100vw / 599));
   }
 }

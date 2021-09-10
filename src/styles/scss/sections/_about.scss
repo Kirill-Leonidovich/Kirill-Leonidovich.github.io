@@ -70,6 +70,7 @@
 }
 .autor-info__text {
   padding: 0 15px;
+  line-height: 150%;
   transition: $shortDelay;
   @media screen and (max-width: 599px) {
     font-weight: 400;
@@ -92,11 +93,11 @@
   @media screen and (max-width: 599px) {
     width: 100%;
     height: auto;
-    margin-bottom: calc(0px + 50 * (100vw / 599));
+    @include adaptiveMBfrom40to60;
   }
 }
 .photo-autor__img {
-  object-position: 65% 50%;  
+  object-position: 65% 50%;
 }
 // ._img {
 // }
