@@ -90,22 +90,6 @@ $from10to20px: calc(10px + 10 * ((100vw - 320px) / 1000));
   font-family: "Urbanist", sans-serif;
   overflow-x: hidden;
 }
-._conteiner {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 20px;
-  @media screen and (min-width: 1800px) {
-    max-width: 70%;
-  }
-  @media screen and (max-width: 599px) {
-    padding: 0 10px;
-  }
-}
-._body {
-  padding: $from40to60px 0;
-}
-// .content {
-// }
 .section-heading {
   @include adaptiveMBfrom40to60;
   @media screen and (max-width: 599px) {
@@ -173,11 +157,29 @@ $from10to20px: calc(10px + 10 * ((100vw - 320px) / 1000));
     }
   }
 }
-.img {
+._conteiner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (min-width: 1800px) {
+    max-width: 70%;
+  }
+  @media screen and (max-width: 599px) {
+    padding: 0 10px;
+  }
+}
+._body {
+  padding: $from40to60px 0;
+}
+._img {
   width: 100%;
   height: 100%;
+}
+._contain { 
   object-fit: contain;
-  object-position: center;
+}
+._cover {
+  object-fit: cover;
 }
 
 
@@ -193,9 +195,9 @@ $from10to20px: calc(10px + 10 * ((100vw - 320px) / 1000));
 @import "./sections/header";
 /* header ----- */
 
-/* ----- skils */
-@import "./sections/skils";
-/* skils ----- */
+/* ----- skills */
+@import "./sections/skills";
+/* skills ----- */
 
 /* ----- about */
 @import "./sections/about";
@@ -204,6 +206,10 @@ $from10to20px: calc(10px + 10 * ((100vw - 320px) / 1000));
 /* ----- projects */
 @import "./sections/projects"; 
 /* projects ----- */
+
+/* ----- modal */
+@import "./sections/modal"; 
+/* modal ----- */
 
 /* ----- contact */
 @import "./sections/contact";

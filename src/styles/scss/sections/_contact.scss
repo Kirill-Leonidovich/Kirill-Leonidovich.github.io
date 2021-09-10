@@ -28,9 +28,9 @@
 // }
 // .massage-autor__item {
 // }
-// .massage-autor__link {
-// }
 // .massage-autor-linkedin {
+// }
+// .massage-autor__link {
 // }
 // .massage-autor-facebook {
 // }
@@ -60,15 +60,11 @@
   text-transform: uppercase;
   color: $gray;
 }
+// .form__name {
+// }
 .form-item {
   position: relative;
 }
-// .form__name {
-// }
-// .form__email {
-// }
-// .form__massage {
-// }
 .form__input {
   width: 100%;
   margin-bottom: 30px;
@@ -91,15 +87,6 @@
     padding: 10px;
   }
 }
-.textarea-form {
-  min-height: 120px;
-  height: 150px;
-  resize: vertical;
-  @media (max-width: 599px) {
-    min-height: 60px;
-    height: 80px;
-  }
-}
 .form__label {
   position: absolute;
   top: -5px;
@@ -112,6 +99,19 @@
   @media (max-width: 599px) {
     padding: 0 10px;
     font-size: 12px;
+  }
+}
+// .form__email {
+// }
+// .form__massage {
+// }
+.textarea-form {
+  min-height: 120px;
+  height: 150px;
+  resize: vertical;
+  @media (max-width: 599px) {
+    min-height: 60px;
+    height: 80px;
   }
 }
 .from__btn_submit {

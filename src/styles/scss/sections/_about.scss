@@ -37,12 +37,6 @@
 }
 // .info__name {
 // }
-// .info__city {
-// }
-// .info__age {
-// }
-// .info__work {
-// }
 .autor-info {
   @include dFlexStart;
   align-items: center;
@@ -62,10 +56,6 @@
       }
     }
   }
-  @media screen and (max-width: 599px) {
-    text-align: center;
-    justify-content: center;
-  }
 }
 .autor-info__icon {
   @include dFlexCenter;
@@ -77,9 +67,6 @@
   color: $darcWhite;
   border-radius: 100%;
   transition: $shortDelay;
-  @media screen and (max-width: 599px) {
-    display: none;
-  }
 }
 .autor-info__text {
   padding: 0 15px;
@@ -88,6 +75,12 @@
     font-weight: 400;
   }
 }
+// .info__city {
+// }
+// .info__age {
+// }
+// .info__work {
+// }
 // .info__photo {
 // }
 .photo-autor {
@@ -97,15 +90,15 @@
   overflow: hidden;
   user-select: none;
   @media screen and (max-width: 599px) {
-    width: calc(0px + 300 * (100vw / 599));
-    height: calc(0px + 300 * (100vw / 599));
+    width: 100%;
+    height: auto;
     margin-bottom: calc(0px + 50 * (100vw / 599));
-    border-radius: 100%;
   }
 }
 .photo-autor__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   object-position: 65% 50%;  
 }
+// ._img {
+// }
+// ._cover {
+// }

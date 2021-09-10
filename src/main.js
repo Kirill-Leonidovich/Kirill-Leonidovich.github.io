@@ -10,14 +10,25 @@
 
 
 
-const skils = Array.from(document.querySelectorAll('.skils__item'))
+const skills = Array.from(document.querySelectorAll('.skills__item'))
+const projects = Array.from(document.querySelectorAll('.projects__item'))
 
-skils.forEach(skil => {
-  skil.addEventListener('click', (event) => {
+skills.forEach(skill => {
+  skill.addEventListener('click', (event) => {
     event.currentTarget.classList.add('_focuses')
 
-    skils
-      .filter(skil => skil !== event.currentTarget)
-      .forEach(skil => skil.classList.remove('_focuses'))
+    skills
+      .filter(skill => skill !== event.currentTarget)
+      .forEach(skill => skill.classList.remove('_focuses'))
+  })
+})
+
+projects.forEach(project => {
+  project.addEventListener('click', (event) => {
+    event.currentTarget.classList.add('_focuses')
+
+    projects
+      .filter(project => project !== event.currentTarget)
+      .forEach(project => project.classList.remove('_focuses'))
   })
 })

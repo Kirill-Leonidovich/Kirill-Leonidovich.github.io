@@ -2,23 +2,23 @@
 // }
 // .projects {
 // }
-// .projects__conteiner {
-// }
-// ._conteiner {
-// }
 // .projects__body {
 // }
 // ._body {
+// }
+// .projects__conteiner {
+// }
+// ._conteiner {
 // }
 // .projects__heading {
 // }
 // .section-heading {
 // }
-// .skils__title {
+// .prijects__title {
 // }
 // .scetion-title {
 // }
-// .skils__subtitle {
+// .prijects__subtitle {
 // }
 // .scetion-subtitle {
 // }
@@ -93,16 +93,15 @@
   }
 }
 .projects__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   object-position: top;
 }
-// ._project {
-// }
 ._left {
-  object-position: top left;
+  object-position: top left; 
 }
+// ._img {
+// }
+// ._cover {
+// }
 .projects__baner {
   position: absolute;
   bottom: -40%;
@@ -118,13 +117,18 @@
 }
 .projects__name {
   position: absolute;
-  top: 20%;
-  left: 20px;
-  font-size: $from10to20px;
+  top: 10%;
+  width: 100%;
+  display: block;
+  padding: 0 20px;
+  font-size: 30px;
   letter-spacing: 2px;
-  text-align: center;
+  text-align: start;
   text-transform: uppercase;
   color: $white;
+  @media (max-width: 500px) {
+    font-size: calc(0px + 30 * (100vw  / 500));
+  }
 }
 .projects__qrcode {
   position: absolute;
@@ -132,6 +136,9 @@
   left: 20px;
   width: auto;
   height: 30%;
+}
+.projects__img_qrcode {
+  object-position: top;
 }
 .projects__btn_show-description {
   position: absolute;
@@ -148,88 +155,4 @@
       background-color: $turquoise;
     }
   }
-}
-
-// .projects__modal-window {
-// }
-.modal-window {
-  display: none;
-  position: fixed;
-  top: 10%;
-  left: 5%;
-  z-index: 100;
-  width: 90%;
-  height: 80%;
-  overflow: auto;
-  background-color: $white;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  @include castomScrol;
-}
-.modal-window__body {
-  height: 100%;
-  padding: 30px 0;
-  width: 80%;
-  margin: 0 auto;
-  @include dFlexBetween;
-  align-items: center;
-  flex-direction: column;
-}
-.modal-window__header {
-  width: 100%;
-  flex: 1;
-  margin-bottom: 60px;
-}
-.modal-window__title {
-  margin-bottom: 15px;
-  font-size: $from30to50px;
-  text-transform: uppercase;
-  color: $dark;
-}
-// ._project-name {
-// }
-.clothing-store-website__description {
-  font-size: $from15to25px;
-  color: $dark;
-}
-.modal-window__background {
-  width: 100%;
-  flex: auto;
-  height: 500px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-// .projects__img {
-// }
-// ._project {
-// }
-.modal-window__footer {
-  flex: 1;
-  width: 100%;
-  margin-top: 60px;
-  @include dFlexBetween;
-  align-items: center;
-}
-.modal-window__buttons {
-}
-.modal-window__link {
-  padding: 5px 15px;
-  font-size: $from15to25px;
-  color: $white;
-  background-color: $navyBlue;
-  text-transform: uppercase;
-  border-radius: 5px;
-  transition: $shortDelay;
-  @media (hover: hover) {
-    &:hover {
-     background-color: $gray;
-    }
-  }
-}
-._link-github {
-  margin-right: 10px;
-}
-._link-see {
-}
-.modal-window__qrcode {
-  width: 100px;
-  height: 100px;
 }
