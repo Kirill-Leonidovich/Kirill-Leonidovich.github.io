@@ -1,5 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+body {
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -99;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #000000e8;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+body._overflow-hidden {
+  overflow: hidden;
+}
+
+body._overflow-hidden::after {
+  z-index: 99;
+  opacity: 1;
+}
+
 .wrapper {
   font-family: "Urbanist", sans-serif;
   overflow-x: hidden;
@@ -761,6 +789,10 @@ h6 {
 
 /* about ----- */
 /* ----- projects */
+.projects {
+  background-color: #ffffff;
+}
+
 .projects__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -834,6 +866,12 @@ h6 {
         -ms-user-select: auto;
             user-select: auto;
   }
+  .projects__item:hover .projects__img {
+    margin-top: -20px;
+    margin-left: -25%;
+    width: 150%;
+    height: 150%;
+  }
 }
 
 @media screen and (hover: none) {
@@ -871,8 +909,10 @@ h6 {
 }
 
 .projects__img {
-  -o-object-position: top;
-     object-position: top;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
 }
 
 ._left {
@@ -886,11 +926,11 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000e8;
+  background-color: #00000095;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease 0.2s;
+  transition: all 0.2s ease 0.2s;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -930,7 +970,7 @@ h6 {
      object-position: top;
 }
 
-.projects__btn_show-description {
+.projects__btn_show-modal {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -944,7 +984,7 @@ h6 {
 }
 
 @media (hover: hover) {
-  .projects__btn_show-description:hover {
+  .projects__btn_show-modal:hover {
     background-color: #2a778f;
   }
 }
@@ -964,6 +1004,8 @@ h6 {
   background-color: #ffffff;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .modal::-webkit-scrollbar {
@@ -984,6 +1026,14 @@ h6 {
   .modal {
     width: 90%;
   }
+}
+
+._show-project .modal__project-photo {
+  width: 100%;
+}
+
+._hide {
+  opacity: 0;
 }
 
 .modal__close {
@@ -1076,19 +1126,16 @@ h6 {
 }
 
 .modal__description {
-  font-size: calc(15px + 10 * ((100vw - 320px) / 1000));
-  color: #444444;
+  font-size: calc(10px + 10 * ((100vw - 320px) / 1000));
+  letter-spacing: 1px;
+  line-height: 140%;
+  color: #44444450;
 }
 
-.modal__footer {
+.modal__buttons {
   width: 100%;
+  margin-bottom: calc(40px + 20 * ((100vw - 320px) / 1000));
   text-align: center;
-}
-
-@media (max-width: 992px) {
-  .modal__footer {
-    text-align: start;
-  }
 }
 
 @media (max-width: 992px) {
@@ -1102,7 +1149,7 @@ h6 {
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
   .modal__buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1121,9 +1168,10 @@ h6 {
   border-radius: 5px;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  cursor: pointer;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
   .modal__link {
     margin: 5px 0;
     padding: 10px;
@@ -1143,13 +1191,24 @@ h6 {
 }
 
 .modal__project-photo {
-  display: none;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 0;
+  -webkit-box-shadow: 0 0 28px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0 28px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.22);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.modal__img {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 /* modal ----- */
 /* ----- contact */
+.contact {
+  background-color: #ffffff;
+}
+
 .contact__massage_autor {
   margin-bottom: calc(40px + 20 * ((100vw - 320px) / 1000));
 }

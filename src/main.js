@@ -1,12 +1,30 @@
-// const api = async () => {
-//   const response = await fetch('https://api.github.com/users/Kirill-Leonidovich/repos/owner/')
-//   const data = await response.json()
+import { Project } from './classes/Project.js'
 
-//   console.log(data);
-//   // document._body.insertAdjace/ntHTML('afterbegin', `<img src="${data.avatar_url}" alt="${data.name}">`)
-// }
 
-// api()
+const api = async () => {
+  const response = await fetch('https://api.github.com/users/Kirill-Leonidovich/repos') // насзания всех repository
+  // const response = await fetch('https://api.github.com/users/Kirill-Leonidovich/repos/owner/')
+  // const response = await fetch('https://api.github.com/users/kirill-leonidovich')
+  const data = await response.json()
+
+  // console.log(data[0].owner);
+  // console.log(data);
+
+  data
+    // .map(i => i = i.name)
+    .filter(i => !(i.name.startsWith('kirill-leonidovich') || i.name.startsWith('javaScript-cheat-sheet_app')))
+    .forEach(i => new Project({
+      name: i.name,
+      parent: '.projects__list',
+      description: i.description
+    })) // насзания всех repository
+
+
+
+  // document._body.insertAdjace/ntHTML('afterbegin', `<img src="${data.avatar_url}" alt="${data.name}">`)
+}
+
+api()
 
 
 

@@ -61,7 +61,6 @@
   }
 }
 
-
 $white: #ffffff;
 $transparentWhite: #ffffff17;
 $darcWhite: #f0f0f0;
@@ -84,8 +83,29 @@ $from30to50px: calc(30px + 20 * ((100vw - 320px) / 1000));
 $from20to35px: calc(20px + 15 * ((100vw - 320px) / 1000));
 $from15to25px: calc(15px + 10 * ((100vw - 320px) / 1000));
 $from10to20px: calc(10px + 10 * ((100vw - 320px) / 1000));
-
-
+body {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -99;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $blac;
+    opacity: 0;
+    transition: $shortDelay;
+  }
+  &._overflow-hidden {
+    overflow: hidden;
+    &::after {
+      z-index: 99;
+      opacity: 1;
+    }
+  }
+}
 .wrapper {
   font-family: "Urbanist", sans-serif;
   overflow-x: hidden;
@@ -134,9 +154,9 @@ $from10to20px: calc(10px + 10 * ((100vw - 320px) / 1000));
     @include dFlexCenter;
     @include adaptiveFrom40To60;
     margin: 5px;
-    font-size:$from20to35px;
+    font-size: $from20to35px;
     color: $white;
-    background-color:$turquoise;
+    background-color: $turquoise;
     border: 2px solid transparent;
     border-radius: 10px;
     transition: $shortDelay;
@@ -175,13 +195,12 @@ $from10to20px: calc(10px + 10 * ((100vw - 320px) / 1000));
   width: 100%;
   height: 100%;
 }
-._contain { 
+._contain {
   object-fit: contain;
 }
 ._cover {
   object-fit: cover;
 }
-
 
 /* ----- zeroing */
 @import "./zeroing";
@@ -204,17 +223,16 @@ $from10to20px: calc(10px + 10 * ((100vw - 320px) / 1000));
 /* about ----- */
 
 /* ----- projects */
-@import "./sections/projects"; 
+@import "./sections/projects";
 /* projects ----- */
 
 /* ----- modal */
-@import "./sections/modal"; 
+@import "./sections/modal";
 /* modal ----- */
 
 /* ----- contact */
 @import "./sections/contact";
 /* contact ----- */
-
 
 // @media (hover: hover) {}
 // @media screen and (hover: none) {}
