@@ -1271,12 +1271,6 @@ h6 {
   color: #10425f;
 }
 
-@media (max-width: 599px) {
-  .form__input {
-    padding: 10px;
-  }
-}
-
 .form__label {
   position: absolute;
   top: -5px;

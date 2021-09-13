@@ -5,11 +5,8 @@ export class Modal extends Element {
   constructor(options) {
     super()
 
-    // this.$modal
-    // this.$buttonModalClose
-    // this.$buttonLookInPng
-    this.$parent = options.parent
     this.$project = options.project
+    this.$parent = options.parent
     this.projectName = options.projectName
     this.description = options.description
 

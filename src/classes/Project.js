@@ -1,6 +1,9 @@
 import { Element } from './Element.js';
 import { Modal } from './Modal.js';
 
+
+const projects = []
+
 export class Project extends Element {
   constructor(options) {
     super()
@@ -13,9 +16,11 @@ export class Project extends Element {
     this.#createProject()
   }
 
+  
   #getNameWithoutType(name) {
     return name.split('_')[0]
   }
+
 
   #createProject() {
     const projectBody = `
@@ -51,25 +56,41 @@ export class Project extends Element {
       </div>
       `
 
-    this.renderProject(projectBody)
+    this.#renderProject(projectBody)
   }
 
-  renderProject(projectBody) {
+
+  #renderProject(projectBody) {
     this.$parent.insertAdjacentHTML('afterbegin', projectBody)
-    this.addHandlerShowModal()
+    this.#addHandlerProejct()
   }
 
-  addHandlerShowModal() {
-    const $project = this.getDomElement('.projects__item')
-    const $buttonShowModal = this.getDomElement('.projects__btn_show-modal', false, $project)
 
-    $buttonShowModal.addEventListener('click', (event) => {
-      new Modal({
-        project: event.target.closest('.projects__item'),
-        parent: document.body, 
-        projectName: this.name,
-        description: this.description
-      })
+  #addHandlerProejct() {
+    const $project = this.getDomElement('.projects__item')
+    $project.addEventListener('click', this.focusedProject)  
+    projects.push($project)
+
+    const $buttonShowModal = this.getDomElement('.projects__btn_show-modal', false, $project)
+    $buttonShowModal.addEventListener('click', this.showModal)
+  }
+
+
+  focusedProject(event) {
+    event.currentTarget.classList.add('_focuses')
+
+    projects
+      .filter(project => project !== event.currentTarget)
+      .forEach(project => project.classList.remove('_focuses'))
+  }
+
+
+  showModal(event) {
+    new Modal({
+      project: event.target.closest('.projects__item'),
+      parent: document.body,
+      projectName: this.name,
+      description: this.description
     })
   }
 }

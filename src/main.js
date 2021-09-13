@@ -1,4 +1,42 @@
+import { Skills } from './classes/Skills.js'
 import { Project } from './classes/Project.js'
+
+
+const skills = [
+  {
+    parent: '.skills__list',
+    skillName: 'html',
+    documentationLink: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+  },
+  {
+    parent: '.skills__list',
+    skillName: 'css',
+    documentationLink: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Reference',
+  },
+  {
+    parent: '.skills__list',
+    skillName: 'scss',
+    documentationLink: 'https://sass-lang.com/documentation',
+  },
+  {
+    parent: '.skills__list',
+    skillName: 'javascript',
+    documentationLink: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+  },
+  {
+    parent: '.skills__list',
+    skillName: 'typescript',
+    documentationLink: 'https://www.typescriptlang.org/docs/',
+  },
+  {
+    parent: '.skills__list',
+    skillName: 'git',
+    documentationLink: 'https://git-scm.com/docs/git',
+  }
+]
+
+skills.forEach(skill => new Skills(skill))
+
 
 
 const api = async () => {
@@ -25,28 +63,3 @@ const api = async () => {
 }
 
 api()
-
-
-
-const skills = Array.from(document.querySelectorAll('.skills__item'))
-const projects = Array.from(document.querySelectorAll('.projects__item'))
-
-skills.forEach(skill => {
-  skill.addEventListener('click', (event) => {
-    event.currentTarget.classList.add('_focuses')
-
-    skills
-      .filter(skill => skill !== event.currentTarget)
-      .forEach(skill => skill.classList.remove('_focuses'))
-  })
-})
-
-projects.forEach(project => {
-  project.addEventListener('click', (event) => {
-    event.currentTarget.classList.add('_focuses')
-
-    projects
-      .filter(project => project !== event.currentTarget)
-      .forEach(project => project.classList.remove('_focuses'))
-  })
-})
