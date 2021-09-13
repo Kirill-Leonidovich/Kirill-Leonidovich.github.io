@@ -1,4 +1,4 @@
-import { Skills } from './classes/Skills.js'
+import { Skills } from './classes/Skill.js'
 import { Project } from './classes/Project.js'
 
 

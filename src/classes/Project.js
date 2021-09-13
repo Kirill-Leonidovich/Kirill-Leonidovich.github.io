@@ -72,7 +72,7 @@ export class Project extends Element {
     projects.push($project)
 
     const $buttonShowModal = this.getDomElement('.projects__btn_show-modal', false, $project)
-    $buttonShowModal.addEventListener('click', this.showModal)
+    $buttonShowModal.addEventListener('click', this.showModal.bind(this))
   }
 
 
