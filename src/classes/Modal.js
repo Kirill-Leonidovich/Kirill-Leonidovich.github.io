@@ -9,6 +9,7 @@ export class Modal extends Element {
     this.projectNameWithoutType = options.projectNameWithoutType
     this.projectDescription = options.projectDescription
     this.parentSelector = options.parentSelector
+    this.$parent = this.getDomElement(this.parentSelector)
     this.modalBody = `
       <div class="projects__modal modal _hide">
         <span class="modal__close"></span>
