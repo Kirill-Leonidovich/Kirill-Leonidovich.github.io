@@ -4,21 +4,15 @@ import { Element } from './Element.js';
 const skills = []
 
 
-export class Skills extends Element {
+export class Skill extends Element {
   constructor(options) {
     super()
 
-    this.$parent = this.getDomElement(options.parent)
     this.skillName = options.skillName
     this.documentationLink = options.documentationLink
-
-    this.#createSkill()
-  }
-
-
-  #createSkill() {
-    const skillBody = `
-      <spna class="skills__item _${this.skillName}">
+    this.parentSelector = options.parentSelector ? options.parentSelector : '.skills__list'
+    this.skillBody = `
+      <spna class="skills__item _${options.skillName}">
         <p class="skills__name">
           ${this.skillName}
         </p>
@@ -32,17 +26,11 @@ export class Skills extends Element {
       </spna>
       `
 
-    this.#renderSkill(skillBody)
+    this.renderElement(this.skillBody, this.parentSelector)
   }
 
 
-  #renderSkill(skillBody) {
-    this.$parent.insertAdjacentHTML('afterbegin', skillBody)
-    this.#addHandlerSkills()
-  }
-
-
-  #addHandlerSkills() {
+  addHandlerEvent() {
     const $skill = this.getDomElement('.skills__item')
     $skill.addEventListener('click', this.focusedSkill)
     skills.push($skill)

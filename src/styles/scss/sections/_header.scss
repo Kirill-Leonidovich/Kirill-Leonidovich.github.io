@@ -28,7 +28,7 @@
   }
 }
 .header__subtitle {
-  font-size:$from20to35px;
+  font-size: $from20to35px;
   font-weight: 200;
   letter-spacing: 2px;
   text-transform: capitalize;
@@ -57,26 +57,14 @@
 .header__artilce {
   margin-bottom: $from10to20px;
 }
-.header__massage_autor {
+.header__messenger_autor {
   @include adaptiveMBfrom40to60;
 }
-// .massage-autor {
+// .messenger-autor {
 // }
-// .massage-autor__item {
+// .messenger-autor__item {
 // }
-// .massage-autor-linkedin {
-// }
-// .massage-autor__link {
-// }
-// .massage-autor-facebook {
-// }
-// .massage-autor-github {
-// }
-// .massage-autor-telegram {
-// }
-// .massage-autor-instagram {
-// }
-// .massage-autor-phone {
+// .messenger-autor__link {
 // }
 // .header__nav {
 // }

@@ -23,26 +23,14 @@
 // }
 // .scetion-subtitle {
 // }
-.contact__massage_autor {
+.contact__messenger_autor {
   @include adaptiveMBfrom40to60;
 }
-// .massage-autor {
+// .messenger-autor {
 // }
-// .massage-autor__item {
+// .messenger-autor__item {
 // }
-// .massage-autor-linkedin {
-// }
-// .massage-autor__link {
-// }
-// .massage-autor-facebook {
-// }
-// .massage-autor-github {
-// }
-// .massage-autor-telegram {
-// }
-// .massage-autor-instagram {
-// }
-// .massage-autor-phone {
+// .messenger-autor__link {
 // }
 // .contact__form {
 // }
@@ -102,7 +90,7 @@
 }
 // .form__email {
 // }
-// .form__massage {
+// .form__messenger {
 // }
 .textarea-form {
   min-height: 120px;
@@ -128,8 +116,8 @@
     font-size: calc(5px + 15 * (100vw / 599));
   }
   @media (hover: hover) {
-     &:hover {
-       background-color: $blue;
-     }
+    &:hover {
+      background-color: $blue;
+    }
   }
 }

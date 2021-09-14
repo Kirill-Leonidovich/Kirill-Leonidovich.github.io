@@ -9,22 +9,11 @@ export class Project extends Element {
     super()
 
     this.name = options.name
-    this.description = options.description
-    this.$parent = this.getDomElement(options.parent)
     this.nameWithoutType = this.#getNameWithoutType(this.name)
-
-    this.#createProject()
-  }
-
-  
-  #getNameWithoutType(name) {
-    return name.split('_')[0]
-  }
-
-
-  #createProject() {
-    const projectBody = `
-      <div class="projects__item" id="${this.nameWithoutType}">
+    this.description = options.description
+    this.parentSelector = options.parentSelector ? options.parentSelector : '.projects__list'
+    this.projectBody = `
+      <div class="projects__item" id="${this.name}">
         <div class="projects__background">
           <picture>
             <source srcset="src/img/projects/${this.nameWithoutType}/320.png" type="image/png"
@@ -56,19 +45,18 @@ export class Project extends Element {
       </div>
       `
 
-    this.#renderProject(projectBody)
+    this.renderElement(this.projectBody, this.parentSelector)
+  }
+
+  
+  #getNameWithoutType(name) {
+    return name.split('_')[0]
   }
 
 
-  #renderProject(projectBody) {
-    this.$parent.insertAdjacentHTML('afterbegin', projectBody)
-    this.#addHandlerProejct()
-  }
-
-
-  #addHandlerProejct() {
+  addHandlerEvent() {
     const $project = this.getDomElement('.projects__item')
-    $project.addEventListener('click', this.focusedProject)  
+    $project.addEventListener('click', this.focusedProject) 
     projects.push($project)
 
     const $buttonShowModal = this.getDomElement('.projects__btn_show-modal', false, $project)
@@ -85,12 +73,12 @@ export class Project extends Element {
   }
 
 
-  showModal(event) {
+  showModal() {
     new Modal({
-      project: event.target.closest('.projects__item'),
-      parent: document.body,
       projectName: this.name,
-      description: this.description
+      projectNameWithoutType: this.nameWithoutType,
+      projectDescription: this.description,
+      parentSelector: 'body'
     })
   }
 }

@@ -144,13 +144,13 @@ body {
     }
   }
 }
-.massage-autor {
+.messenger-autor {
   @include dFlexCenter;
   flex-wrap: wrap;
   // @include adaptiveMBfrom40to60;
-  // .massage-autor__item {
+  // .messenger-autor__item {
   // }
-  .massage-autor__link {
+  .messenger-autor__link {
     @include dFlexCenter;
     @include adaptiveFrom40To60;
     margin: 5px;
