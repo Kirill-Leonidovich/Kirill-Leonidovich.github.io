@@ -1,4 +1,5 @@
 import { Messenger } from './classes/Messenger.js'
+import { Autor } from './classes/Autor.js'
 import { Skill } from './classes/Skill.js'
 import { Project } from './classes/Project.js'
 
@@ -73,11 +74,28 @@ const skillsData = [
 skillsData.forEach(skill => new Skill(skill))
 
 
-const api = async () => {
-  const response = await fetch('https://api.github.com/users/Kirill-Leonidovich/repos') // насзания всех repository
-  const data = await response.json()
+const getAutorInfo = async () => {
+  const request = await fetch('https://api.github.com/users/Kirill-Leonidovich')
+  const response = await request.json()
 
-  data
+  const info = {
+    name: response.name,
+    bio: response.bio,
+    location: response.location,
+    photo: response.avatar_url
+  }
+
+  new Autor(info)
+}
+
+getAutorInfo()
+
+
+const getAllRepository = async () => {
+  const request = await fetch('https://api.github.com/users/Kirill-Leonidovich/repos') // насзания всех repository
+  const response = await request.json()
+
+  response
     .filter(i => !(i.name.startsWith('kirill-leonidovich') || i.name.startsWith('javaScript-cheat-sheet_app')))
     .forEach(i => new Project({
       name: i.name,
@@ -85,4 +103,4 @@ const api = async () => {
     }))
 }
 
-api()
+getAllRepository()
