@@ -17,4 +17,3 @@ export const goAnimationTo = (event) => {
 
   event.preventDefault()
 }
-

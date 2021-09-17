@@ -1,5 +1,5 @@
 import { Element } from './Element.js';
-
+import { goAnimation } from '../scripts/UI/showText.js'
 export class Autor extends Element {
   constructor(options) {
     super()
@@ -35,11 +35,25 @@ export class Autor extends Element {
       `
 
     this.renderElement(this.autorBody, this.parentSelector)
+
+    this.startAnimation = this.startAnimation.bind(this)
+    window.addEventListener('scroll', this.startAnimation)
   }
 
+  startAnimation() {
+    const autorInfoItems = this.getDomElement('.autor-info__text', true)
+
+    if (autorInfoItems[0].getBoundingClientRect().top <= 906) {
+      autorInfoItems.forEach(item => {
+        goAnimation(item)
+      })
+      
+      window.removeEventListener('scroll', this.startAnimation)
+    }
+  }
 
   addedBio() {
-    if(!this.bio) return ''
+    if (!this.bio) return ''
 
     return `
       <article class="info__work autor-info">
