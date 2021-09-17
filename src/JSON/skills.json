@@ -1,0 +1,25 @@
+[
+  { 
+    "skillName": "git", 
+    "documentationLink": "https://git-scm.com/docs/git" },
+  {
+    "skillName": "typescript",
+    "documentationLink": "https://www.typescriptlang.org/docs/"
+  },
+  {
+    "skillName": "javascript",
+    "documentationLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  {
+    "skillName": "scss",
+    "documentationLink": "https://sass-lang.com/documentation"
+  },
+  {
+    "skillName": "css",
+    "documentationLink": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
+  },
+  {
+    "skillName": "html",
+    "documentationLink": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+  }
+]
