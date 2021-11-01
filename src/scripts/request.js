@@ -49,7 +49,7 @@ export const getAllRepository = async () => {
   const response = await request.json()
 
   response
-    .filter(i => !(i.name.startsWith('kirill-leonidovich') || i.name.startsWith('javaScript-cheat-sheet_app')))
+    .filter(i => !(i.name.startsWith('kirill-leonidovich') || i.name.startsWith('javascript-cheat-sheet') || i.name.startsWith('extended-select')))
     .forEach(i => new Project({
       name: i.name,
       description: i.description
