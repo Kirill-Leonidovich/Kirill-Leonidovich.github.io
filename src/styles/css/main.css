@@ -196,7 +196,7 @@ body._overflow-hidden::after {
      object-fit: cover;
 }
 
-/* ----- zeroing */
+/* ----- reset */
 * {
   padding: 0;
   margin: 0;
@@ -284,7 +284,7 @@ h6 {
   font-weight: 500;
 }
 
-/* zeroing ----- */
+/* reset ----- */
 /* ----- fonts */
 /* fonts ----- */
 /* ----- header */
