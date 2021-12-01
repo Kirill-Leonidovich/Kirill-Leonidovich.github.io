@@ -25,7 +25,7 @@ export class Autor extends Element {
         </article>
         <article class="info__work autor-info">
           <span class="autor-info__icon"><i class="far fa-keyboard"></i></span>
-          <span class="autor-info__text">frontend developer</span>
+          <span class="autor-info__text">JavaScript developer</span>
         </article>
         ${this.addedBio()}
       </div>
