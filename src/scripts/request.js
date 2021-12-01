@@ -22,7 +22,7 @@ export const getMessengersData = async () => {
 
 
 export const getAutorInfo = async () => {
-  const request = await fetch('https://api.github.com/users/Kirill-Leonidovich')
+  const request = await fetch('https://api.github.com/users/alkhimenok')
   const response = await request.json()
 
   const info = {
@@ -45,11 +45,11 @@ export const getSkillsData = async () => {
 
 
 export const getAllRepository = async () => {
-  const request = await fetch('https://api.github.com/users/Kirill-Leonidovich/repos') // насзания всех repository
+  const request = await fetch('https://api.github.com/users/alkhimenok/repos') // насзания всех repository
   const response = await request.json()
 
   response
-    .filter(i => !(i.name.startsWith('kirill-leonidovich') || i.name.startsWith('javascript-cheat-sheet') || i.name.startsWith('extended-select')))
+    .filter(i => !(i.name.startsWith('alkhimenok') || i.name.startsWith('extended-select')))
     .forEach(i => new Project({
       name: i.name,
       description: i.description

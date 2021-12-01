@@ -1,13 +1,8 @@
 [
   {
-    "messengerName": "twitter",
-    "iconClassName": "fab fa-twitter",
-    "messengerLink": "https://twitter.com/AlkhimenokKL"
-  },
-  {
-    "messengerName": "instagram",
-    "iconClassName": "fab fa-instagram",
-    "messengerLink": "https://www.instagram.com/alkhimenok.kirill.leonidovich/"
+    "messengerName": "telegram",
+    "iconClassName": "fab fa-telegram-plane",
+    "messengerLink": "https://t.me/alkhimenok"
   },
   {
     "messengerName": "facebook",
@@ -15,9 +10,14 @@
     "messengerLink": "https://www.facebook.com/profile.php?id=100072407994592"
   },
   {
-    "messengerName": "telegram",
-    "iconClassName": "fab fa-telegram-plane",
-    "messengerLink": "https://t.me/alkhimenok"
+    "messengerName": "instagram",
+    "iconClassName": "fab fa-instagram",
+    "messengerLink": "https://www.instagram.com/alkhimenok.kirill.leonidovich/"
+  },
+  {
+    "messengerName": "twitter",
+    "iconClassName": "fab fa-twitter",
+    "messengerLink": "https://twitter.com/AlkhimenokKL"
   },
   {
     "messengerName": "linkedin",
@@ -27,6 +27,6 @@
   {
     "messengerName": "github",
     "iconClassName": "fab fa-github-alt",
-    "messengerLink": "https://github.com/Kirill-Leonidovich"
+    "messengerLink": "https://github.com/alkhimenok"
   }
 ]

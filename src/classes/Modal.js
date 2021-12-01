@@ -26,10 +26,10 @@ export class Modal extends Element {
               <img class="modal__img_qrcode _img _cover" src="src/img/projects/${this.projectNameWithoutType}/QR.png" alt="qrcode">
             </div>
             <div class="modal__buttons">
-              <a class="modal__link _link-go-to-github" href="https://github.com/kirill-leonidovich/${this.projectName}">
+              <a class="modal__link _link-go-to-github" href="https://github.com/alkhimenok/${this.projectName}">
                 github
               </a>
-              <a class="modal__link _link-see-this-project" href="https://kirill-leonidovich.github.io/${this.projectName}/">
+              <a class="modal__link _link-see-this-project" href="https://alkhimenok.github.io/${this.projectName}/">
                 see this project
               </a>
               <a class="modal__link _link-look-in-png" href="#">  
