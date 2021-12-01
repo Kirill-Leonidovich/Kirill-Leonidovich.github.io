@@ -23,6 +23,10 @@ export class Autor extends Element {
           <span class="autor-info__icon"><i class="fas fa-sort-numeric-up-alt"></i></span>
           <span class="autor-info__text">20 year (01.05.2001)</span>
         </article>
+        <article class="info__work autor-info">
+          <span class="autor-info__icon"><i class="far fa-keyboard"></i></span>
+          <span class="autor-info__text">JavaScript developer</span>
+        </article>
         ${this.addedBio()}
       </div>
       <div class="info__photo photo-autor">
