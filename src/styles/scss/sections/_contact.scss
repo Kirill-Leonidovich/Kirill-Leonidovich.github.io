@@ -1,123 +1,87 @@
-// .main__contact {
-// }
 .contact {
-  background-color: $white;
+	background-color: $white;
 }
-// .contact__conteiner {
-// }
-// ._conteiner {
-// }
-// .contact__body {
-// }
-// ._body {
-// }
-// .contact__heading {
-// }
-// .section-heading {
-// }
-// .contact__title {
-// }
-// .scetion-title {
-// }
-// .contact__subtitle {
-// }
-// .scetion-subtitle {
-// }
 .contact__messenger_autor {
-  @include adaptiveMBfrom40to60;
+	@include adaptiveMBfrom40to60;
 }
-// .messenger-autor {
-// }
-// .messenger-autor__item {
-// }
-// .messenger-autor__link {
-// }
-// .contact__form {
-// }
 .form {
-  width: 90%;
-  margin: 0 auto;
-  padding: $from20to35px 0;
-  @media (min-width: 992px) {
-    width: 70%;
-  }
+	width: 90%;
+	margin: 0 auto;
+	padding: $from20to35px 0;
+	@media (min-width: 992px) {
+		width: 70%;
+	}
 }
 .form__articl {
-  @include adaptiveMBfrom40to60;
-  font-size: $from15to25px;
-  font-weight: 900;
-  text-align: center;
-  text-transform: uppercase;
-  color: $gray;
+	@include adaptiveMBfrom40to60;
+	font-size: $from15to25px;
+	font-weight: 900;
+	text-align: center;
+	text-transform: uppercase;
+	color: $gray;
 }
-// .form__name {
-// }
 .form-item {
-  position: relative;
+	position: relative;
 }
 .form__input {
-  width: 100%;
-  margin-bottom: 30px;
-  padding: 20px;
-  font-size: 16px;
-  border: 2px solid $transparentGray;
-  border-radius: 10px;
-  transition: $shortDelay;
-  &:hover,
-  &:focus,
-  &:not(:placeholder-shown) {
-    border: 2px solid $blue;
-  }
-  &:focus + .form__label,
-  &:not(:placeholder-shown) + .form__label {
-    font-size: 10px;
-    color: $navyBlue;
-  }
+	width: 100%;
+	margin-bottom: 30px;
+	padding: 20px;
+	font-size: 16px;
+	border: 2px solid $transparentGray;
+	border-radius: 10px;
+	transition: $shortDelay;
+	&:hover,
+	&:focus,
+	&:not(:placeholder-shown) {
+		border: 2px solid $blue;
+	}
+	&:focus + .form__label,
+	&:not(:placeholder-shown) + .form__label {
+		font-size: 10px;
+		color: $navyBlue;
+	}
 }
 .form__label {
-  position: absolute;
-  top: -5px;
-  left: 20px;
-  padding: 0 20px;
-  text-transform: uppercase;
-  color: $gray;
-  background-color: $white;
-  transition: $shortDelay;
-  @media (max-width: 599px) {
-    padding: 0 10px;
-    font-size: 12px;
-  }
+	position: absolute;
+	top: -5px;
+	left: 20px;
+	padding: 0 20px;
+	text-transform: uppercase;
+	color: $gray;
+	background-color: $white;
+	transition: $shortDelay;
+	@media (max-width: 599px) {
+		padding: 0 10px;
+		font-size: 12px;
+	}
 }
-// .form__email {
-// }
-// .form__messenger {
-// }
 .textarea-form {
-  min-height: 120px;
-  height: 150px;
-  resize: vertical;
-  @media (max-width: 599px) {
-    min-height: 80px;
-    height: 140px;
-  }
+	min-height: 120px;
+	height: 150px;
+	resize: vertical;
+	@media (max-width: 599px) {
+		min-height: 80px;
+		height: 140px;
+	}
 }
 .from__btn_submit {
-  margin-top: $from20to35px;
-  padding: 15px 30px;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: $white;
-  background-color: $navyBlue;
-  border-radius: 5px;
-  transition: $shortDelay;
-  @media (max-width: 599px) {
-    width: 100%;
-    padding: 20px;
-    font-size: calc(5px + 15 * (100vw / 599));
-  }
-  @media (hover: hover) {
-    &:hover {
-      background-color: $blue;
-    }
-  }
+	margin-top: $from20to35px;
+	padding: 15px 30px;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: $white;
+	background-color: $navyBlue;
+	border-radius: 5px;
+	transition: $shortDelay;
+	@media (max-width: 599px) {
+		width: 100%;
+		padding: 20px;
+		font-size: calc(5px + 15 * (100vw / 599));
+	}
+	@media (hover: hover) {
+		&:hover {
+			background-color: $blue;
+		}
+	}
 }

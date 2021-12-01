@@ -1,168 +1,144 @@
-// .main__projects {
-// }
 .projects {
-  background-color: $white;
+	background-color: $white;
 }
-// .projects__body {
-// }
-// ._body {
-// }
-// .projects__conteiner {
-// }
-// ._conteiner {
-// }
-// .projects__heading {
-// }
-// .section-heading {
-// }
-// .prijects__title {
-// }
-// .scetion-title {
-// }
-// .prijects__subtitle {
-// }
-// .scetion-subtitle {
-// }
 .projects__list {
-  @include dFlexTop;
-  justify-content: center;
-  flex-wrap: wrap;
+	@include dFlexTop;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .projects__item {
-  position: relative;
-  flex: 26%;
-  height: 250px;
-  margin: 10px;
-  transition: $shortDelay;
-  overflow: hidden;
-  @media (max-width: 992px) {
-    flex: 34%;
-    height: 300px;
-  }
-  @media (max-width: 767px) {
-    flex: 51%;
-    height: auto;
-    max-height: 600px;
-  }
-  @media (max-width: 500px) {
-    margin: 10px 50px;
-    height: 400px;
-  }
-  @media (max-width: 500px) {
-    margin: 10px;
-  }
-  @media (hover: hover) {
-    &:hover {
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-      .projects__baner {
-        bottom: 0;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        user-select: auto;
-      }
-      .projects__img {
-        margin-top: -20px;
-        margin-left: -25%;
-        width: 150%;
-        height: 150%;
-      }
-    }
-  }
-  @media screen and (hover: none) {
-    &._focuses {
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-      .projects__baner {
-        bottom: 0;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        user-select: auto;
-      }
-    }
-  }
+	position: relative;
+	flex: 26%;
+	height: 250px;
+	margin: 10px;
+	transition: $shortDelay;
+	overflow: hidden;
+	@media (max-width: 992px) {
+		flex: 34%;
+		height: 300px;
+	}
+	@media (max-width: 767px) {
+		flex: 51%;
+		height: auto;
+		max-height: 600px;
+	}
+	@media (max-width: 500px) {
+		margin: 10px 50px;
+		height: 400px;
+	}
+	@media (max-width: 500px) {
+		margin: 10px;
+	}
+	@media (hover: hover) {
+		&:hover {
+			box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+			.projects__baner {
+				bottom: 0;
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+				user-select: auto;
+			}
+			.projects__img {
+				margin-top: -20px;
+				margin-left: -25%;
+				width: 150%;
+				height: 150%;
+			}
+		}
+	}
+	@media screen and (hover: none) {
+		&._focuses {
+			box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+			.projects__baner {
+				bottom: 0;
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+				user-select: auto;
+			}
+		}
+	}
 }
 .projects__background {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: $brightDark;
-  }
+	width: 100%;
+	height: 100%;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: $brightDark;
+	}
 }
 .projects__img {
-  transition: $shortDelay;
-  object-position: 50% 0;
+	transition: $shortDelay;
+	object-position: 50% 0;
 
-  // object-position: top;
+	// object-position: top;
 }
 ._left {
-  object-position: top left; 
+	object-position: top left;
 }
 // ._img {
 // }
 // ._cover {
 // }
 .projects__baner {
-  position: absolute;
-  bottom: -40%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $brightBlac;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s ease 0.2s;
-  pointer-events: none;
-  user-select: none;
+	position: absolute;
+	bottom: -40%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $brightBlac;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s ease 0.2s;
+	pointer-events: none;
+	user-select: none;
 }
 .projects__name {
-  position: absolute;
-  top: 10%;
-  width: 100%;
-  display: block;
-  padding: 0 20px;
-  font-size: 30px;
-  letter-spacing: 2px;
-  text-align: start;
-  text-transform: uppercase;
-  color: $white;
-  @media (max-width: 500px) {
-    font-size: calc(0px + 30 * (100vw  / 500));
-  }
+	position: absolute;
+	top: 10%;
+	width: 100%;
+	display: block;
+	padding: 0 20px;
+	font-size: 30px;
+	letter-spacing: 2px;
+	text-align: start;
+	text-transform: uppercase;
+	color: $white;
+	@media (max-width: 500px) {
+		font-size: calc(0px + 30 * (100vw / 500));
+	}
 }
 .projects__qrcode {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: auto;
-  height: 30%;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	width: auto;
+	height: 30%;
 }
 .projects__img_qrcode {
-  object-position: top;
+	object-position: top;
 }
 .projects__btn_show-modal {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 5px 10px;
-  font-size: $from15to25px;
-  text-transform: uppercase;
-  color: $white;
-  background-color: $transparentWhite;
-  transition: $shortDelay;
-  @media (hover: hover) {
-    &:hover {
-      background-color: $turquoise;
-    }
-  }
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 5px 10px;
+	font-size: $from15to25px;
+	text-transform: uppercase;
+	color: $white;
+	background-color: $transparentWhite;
+	transition: $shortDelay;
+	@media (hover: hover) {
+		&:hover {
+			background-color: $turquoise;
+		}
+	}
 }

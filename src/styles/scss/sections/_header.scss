@@ -1,135 +1,106 @@
 .header {
-  background: linear-gradient($navyBlue, $blue, $white);
-  text-align: center;
+	background: linear-gradient($navyBlue, $blue, $white);
+	text-align: center;
 }
-// .header__conteiner {
-// }
-// ._conteiner {
-// }
 .header__body {
-  @include dFlexBetween;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
+	@include dFlexBetween;
+	min-height: 100vh;
+	flex-direction: column;
+	align-items: center;
 }
-// ._body {
-// }
 .header__heading {
-  @include adaptiveMBfrom40to60;
+	@include adaptiveMBfrom40to60;
 }
 .header__title {
-  margin-bottom: 10px;
-  font-size: calc(55px + 30 * ((100vw - 320px) / 1000));
-  font-weight: 100;
-  text-transform: uppercase;
-  color: $white;
-  @media screen and (max-width: 320px) {
-    font-size: calc(0px + 55 * (100vw / 320));
-  }
+	margin-bottom: 10px;
+	font-size: calc(55px + 30 * ((100vw - 320px) / 1000));
+	font-weight: 100;
+	text-transform: uppercase;
+	color: $white;
+	@media screen and (max-width: 320px) {
+		font-size: calc(0px + 55 * (100vw / 320));
+	}
 }
 .header__subtitle {
-  font-size: $from20to35px;
-  font-weight: 200;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-  color: $brightGray;
-  @media screen and (max-width: 320px) {
-    font-size: calc(0px + 20 * (100vw / 320));
-  }
+	font-size: $from20to35px;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	color: $brightGray;
+	@media screen and (max-width: 320px) {
+		font-size: calc(0px + 20 * (100vw / 320));
+	}
 }
 .header__about-me {
-  max-width: 90%;
-  margin: 0 auto $from40to60px;
-  padding: 20px 10px;
-  font-size: $from10to20px;
-  font-weight: 100;
-  letter-spacing: 0.7px;
-  line-height: 130%;
-  text-shadow: 1px 1px 5px $navyBlue;
-  color: $brightGray;
-  border-top: 1px solid $transparentGray;
-  border-bottom: 1px solid $transparentGray;
-  @include removeMB;
-  @media screen and (max-width: 320px) {
-    font-size: calc(0px + 10 * (100vw / 320));
-  }
+	max-width: 90%;
+	margin: 0 auto $from40to60px;
+	padding: 20px 10px;
+	font-size: $from10to20px;
+	font-weight: 100;
+	letter-spacing: 0.7px;
+	line-height: 130%;
+	text-shadow: 1px 1px 5px $navyBlue;
+	color: $brightGray;
+	border-top: 1px solid $transparentGray;
+	border-bottom: 1px solid $transparentGray;
+	@include removeMB;
+	@media screen and (max-width: 320px) {
+		font-size: calc(0px + 10 * (100vw / 320));
+	}
 }
 .header__artilce {
-  margin-bottom: $from10to20px;
+	margin-bottom: $from10to20px;
 }
 .header__messenger_autor {
-  @include adaptiveMBfrom40to60;
+	@include adaptiveMBfrom40to60;
 }
-// .messenger-autor {
-// }
-// .messenger-autor__item {
-// }
-// .messenger-autor__link {
-// }
-// .header__nav {
-// }
 .navigation {
-  width: 100%;
+	width: 100%;
 }
 .navigation__list {
-  @include dFlexBetween;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
-  @media screen and (max-width: 599px) {
-    flex-direction: column;
-    padding: 0;
-    li {
-      margin: 15px 0;
-    }
-  }
+	@include dFlexBetween;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 20px;
+	@media screen and (max-width: 599px) {
+		flex-direction: column;
+		padding: 0;
+		li {
+			margin: 15px 0;
+		}
+	}
 }
 .navigation__link {
-  position: relative;
-  margin: 0 5px;
-  padding: 10px;
-  font-size: $from15to25px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: $navyBlue;
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      $blue 35%,
-      $navyBlue 50%,
-      $blue 65%,
-      transparent 100%
-    );
-    border-radius: 10px;
-    transform: scale(0);
-    transition: $shortDelay;
-  }
-  @media (hover: hover) {
-    &:hover {
-      &::after {
-        transform: scale(1);
-      }
-    }
-  }
-  @media screen and (max-width: 599px) {
-    font-size: 25px;
-  }
-  @media screen and (max-width: 320px) {
-    font-size: calc(0px + 25 * (100vw / 320));
-  }
+	position: relative;
+	margin: 0 5px;
+	padding: 10px;
+	font-size: $from15to25px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: $navyBlue;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(90deg, transparent 0%, $blue 35%, $navyBlue 50%, $blue 65%, transparent 100%);
+		border-radius: 10px;
+		transform: scale(0);
+		transition: $shortDelay;
+	}
+	@media (hover: hover) {
+		&:hover {
+			&::after {
+				transform: scale(1);
+			}
+		}
+	}
+	@media screen and (max-width: 599px) {
+		font-size: 25px;
+	}
+	@media screen and (max-width: 320px) {
+		font-size: calc(0px + 25 * (100vw / 320));
+	}
 }
-// ._link-about {
-// }
-// ._link-skills {
-// }
-// ._link-projects {
-// }
-// ._link-contact {
-// }

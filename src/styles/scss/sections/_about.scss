@@ -1,105 +1,67 @@
-// .main_about {
-// }
 .about {
-  background-color: $white;
+	background-color: $white;
 }
-// .about__conteiner {
-// }
-// ._conteiner {
-// }
-// .about__body {
-// }
-// ._body {
-// }
-// .about__heading {
-// }
-// .section-heading {
-// }
-// .about__title {
-// }
-// .scetion-title {
-// }
-// .about__subtitle {
-// }
-// .scetion-subtitle {
-// }
-// .about__info {
-// }
 .info {
-  @include dFlexBetween;
-  align-items: center;
-  @media screen and (max-width: 599px) {
-    flex-direction: column-reverse;
-  }
+	@include dFlexBetween;
+	align-items: center;
+	@media screen and (max-width: 599px) {
+		flex-direction: column-reverse;
+	}
 }
 .info__description {
-  @include removeMB;
+	@include removeMB;
 }
-// .info__name {
-// }
 .autor-info {
-  @include dFlexStart;
-  align-items: center;
-  margin-bottom: $from20to35px;
-  font-size: $from15to25px;
-  font-weight: 200;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-  color: $navyBlue;
-  border-radius: 50px;
-  transition: $shortDelay;
-  @media (hover: hover) {
-    &:hover {
-      background-color: $navyBlue;
-      .autor-info__text {
-        color: $white;
-      }
-    }
-  }
+	@include dFlexStart;
+	align-items: center;
+	margin-bottom: $from20to35px;
+	font-size: $from15to25px;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	color: $navyBlue;
+	border-radius: 50px;
+	transition: $shortDelay;
+	@media (hover: hover) {
+		&:hover {
+			background-color: $navyBlue;
+			.autor-info__text {
+				color: $white;
+			}
+		}
+	}
 }
 .autor-info__icon {
-  @include dFlexCenter;
-  min-width: $from30to50px;
-  min-height: $from30to50px;
-  background-color: $navyBlue;
-  padding-left: 2px;
-  font-size: $from10to20px;
-  color: $darcWhite;
-  border-radius: 100%;
-  transition: $shortDelay;
+	@include dFlexCenter;
+	min-width: $from30to50px;
+	min-height: $from30to50px;
+	background-color: $navyBlue;
+	padding-left: 2px;
+	font-size: $from10to20px;
+	color: $darcWhite;
+	border-radius: 100%;
+	transition: $shortDelay;
 }
 .autor-info__text {
-  padding: 0 15px;
-  line-height: 150%;
-  transition: $shortDelay;
-  @media screen and (max-width: 599px) {
-    font-weight: 400;
-  }
+	padding: 0 15px;
+	line-height: 150%;
+	transition: $shortDelay;
+	@media screen and (max-width: 599px) {
+		font-weight: 400;
+	}
 }
-// .info__city {
-// }
-// .info__age {
-// }
-// .info__work {
-// }
-// .info__photo {
-// }
 .photo-autor {
-  width: calc(150px + 150 * ((100vw - 599px) / 1000));
-  height: calc(350px + 150 * ((100vw - 599px) / 1000));
-  background-color: $gray;
-  overflow: hidden;
-  user-select: none;
-  @media screen and (max-width: 599px) {
-    width: 100%;
-    height: auto;
-    @include adaptiveMBfrom40to60;
-  }
+	width: calc(150px + 150 * ((100vw - 599px) / 1000));
+	height: calc(350px + 150 * ((100vw - 599px) / 1000));
+	background-color: $gray;
+	overflow: hidden;
+	user-select: none;
+	@media screen and (max-width: 599px) {
+		width: 100%;
+		height: auto;
+		@include adaptiveMBfrom40to60;
+	}
 }
 .photo-autor__img {
-  object-position: 65% 50%;
+	object-position: 65% 50%;
 }
-// ._img {
-// }
-// ._cover {
-// }

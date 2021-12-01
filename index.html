@@ -1,160 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./src/styles/css/main.min.css" />
+		<title>alkhimenok</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/styles/css/main.min.css">
-  <title>alkhimenok</title>
-</head>
+	<body>
+		<div class="wrapper">
+			<header class="header" id="header">
+				<div class="header__conteiner _conteiner">
+					<div class="header__body _body">
+						<div class="header__heading">
+							<h1 class="header__title">portfolio</h1>
+							<h3 class="header__subtitle">frontend developer</h3>
+						</div>
+						<div class="header__about-me">
+							<article class="header__artilce">You can see the projects I've worked on here.</article>
+							<article class="header__artilce">
+								Application ideas were taken partly from the Internet, partly from their own ideas.
+							</article>
+							<article class="header__artilce">You can also visit my social networks and messenger.</article>
+						</div>
+						<div class="header__messenger_autor messenger-autor"></div>
+						<nav class="header__nav navigation">
+							<ul class="navigation__list">
+								<li>
+									<a class="navigation__link _link-about" href="#about" data-href="#about">about me</a>
+								</li>
+								<li>
+									<a class="navigation__link _link-skills" href="#skills" data-href="#skills">skills</a>
+								</li>
+								<li>
+									<a class="navigation__link _link-projects" href="#projects" data-href="#projects">projects</a>
+								</li>
+								<li>
+									<a class="navigation__link _link-contact" href="#contact" data-href="#contact">contact</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<main class="main" id="main">
+				<section class="main_about about" id="about">
+					<div class="about__conteiner _conteiner">
+						<div class="about__body _body">
+							<div class="about__heading section-heading">
+								<h2 class="about__title scetion-title">about me</h2>
+								<h4 class="about__subtitle scetion-subtitle">Some facts about me</h4>
+							</div>
+							<div class="about__info info"></div>
+						</div>
+					</div>
+				</section>
+				<section class="main__skills skills" id="skills">
+					<div class="skills__conteiner _conteiner">
+						<div class="skills__body _body">
+							<div class="shils__heading section-heading">
+								<h2 class="skills__title scetion-title">skills</h2>
+								<h4 class="skills__subtitle scetion-subtitle">I own these technologies that are used in front-end development</h4>
+							</div>
+							<div class="skills__list"></div>
+						</div>
+					</div>
+				</section>
+				<section class="main__projects projects" id="projects">
+					<div class="projects__body _body">
+						<div class="projects__conteiner _conteiner">
+							<div class="projects__heading section-heading">
+								<h2 class="prijects__title scetion-title">projects</h2>
+								<h4 class="prijects__subtitle scetion-subtitle">I own these technologies that are used in front-end development</h4>
+							</div>
+						</div>
+						<div class="projects__list"></div>
+					</div>
+				</section>
+				<section class="main__contact contact" id="contact">
+					<div class="contact__conteiner _conteiner">
+						<div class="contact__body _body">
+							<div class="contact__heading section-heading">
+								<h2 class="contact__title scetion-title">contact</h2>
+								<h4 class="contact__subtitle scetion-subtitle">You can contact me here</h4>
+							</div>
+							<div class="contact__messenger_autor messenger-autor"></div>
+							<form class="contact__form form" id="form" action="#">
+								<h4 class="form__articl">send me an e-mail</h4>
+								<div class="form__name form-item">
+									<input class="form__input" id="inputName" name="inputName" type="text" placeholder=" " />
+									<label class="form__label" for="inputName">your name</label>
+								</div>
+								<div class="form__email form-item">
+									<input class="form__input" id="inputEmail" name="inputEmail" type="email" placeholder=" " />
+									<label class="form__label" for="inputEmail">your e-mail</label>
+								</div>
+								<div class="form__messenger form-item">
+									<textarea
+										class="form__input textarea-form"
+										id="inputmessenger"
+										name="inputmessenger"
+										rows="20"
+										placeholder=" "></textarea>
+									<label class="form__label" for="inputmessenger">your message</label>
+								</div>
+								<button class="from__btn_submit" id="btnSubmit" name="btnSubmit">send message</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer" id="footer"></footer>
+		</div>
 
-<body>
-  <div class="wrapper">
-    <header class="header" id="header">
-      <div class="header__conteiner _conteiner">
-        <div class="header__body _body">
-          <div class="header__heading">
-            <h1 class="header__title">
-              portfolio
-            </h1>
-            <h3 class="header__subtitle">
-              frontend developer
-            </h3>
-          </div>
-          <div class="header__about-me">
-            <article class="header__artilce">
-              You can see the projects I've worked on here.
-            </article>
-            <article class="header__artilce">
-              Application ideas were taken partly from the Internet,
-              partly from their own ideas.
-            </article>
-            <article class="header__artilce">
-              You can also visit my social networks and messenger.
-            </article>
-          </div>
-          <div class="header__messenger_autor messenger-autor">
-          </div>
-          <nav class="header__nav navigation">
-            <ul class="navigation__list">
-              <li>
-                <a class="navigation__link _link-about" href="#about" data-href="#about">about me</a>
-              </li>
-              <li>
-                <a class="navigation__link _link-skills" href="#skills" data-href="#skills">skills</a>
-              </li>
-              <li>
-                <a class="navigation__link _link-projects" href="#projects" data-href="#projects">projects</a>
-              </li>
-              <li>
-                <a class="navigation__link _link-contact" href="#contact" data-href="#contact">contact</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <main class="main" id="main">
-      <section class="main_about about" id="about">
-        <div class="about__conteiner _conteiner">
-          <div class="about__body _body">
-            <div class="about__heading section-heading">
-              <h2 class="about__title scetion-title">
-                about me
-              </h2>
-              <h4 class="about__subtitle scetion-subtitle">
-                Some facts about me
-              </h4>
-            </div>
-            <div class="about__info info">
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="main__skills skills" id="skills">
-        <div class="skills__conteiner _conteiner">
-          <div class="skills__body _body">
-            <div class="shils__heading section-heading">
-              <h2 class="skills__title scetion-title">
-                skills
-              </h2>
-              <h4 class="skills__subtitle scetion-subtitle">
-                I own these technologies that are used in front-end development
-              </h4>
-            </div>
-            <div class="skills__list">
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="main__projects projects" id="projects">
-        <div class="projects__body _body">
-          <div class="projects__conteiner _conteiner">
-            <div class="projects__heading section-heading">
-              <h2 class="prijects__title scetion-title">
-                projects
-              </h2>
-              <h4 class="prijects__subtitle scetion-subtitle">
-                I own these technologies that are used in front-end development
-              </h4>
-            </div>
-          </div>
-          <div class="projects__list">
-          </div>
-        </div>
-      </section>
-      <section class="main__contact contact" id="contact">
-        <div class="contact__conteiner _conteiner">
-          <div class="contact__body _body">
-            <div class="contact__heading section-heading">
-              <h2 class="contact__title scetion-title">
-                contact
-              </h2>
-              <h4 class="contact__subtitle scetion-subtitle">
-                You can contact me here
-              </h4>
-            </div>
-            <div class="contact__messenger_autor messenger-autor">
-            </div>
-            <form class="contact__form form" id="form" action="#">
-              <h4 class="form__articl">
-                send me an e-mail
-              </h4>
-              <div class="form__name form-item">
-                <input class="form__input" id="inputName" name="inputName" type="text" placeholder=" ">
-                <label class="form__label" for="inputName">
-                  your name
-                </label>
-              </div>
-              <div class="form__email form-item">
-                <input class="form__input" id="inputEmail" name="inputEmail" type="email" placeholder=" ">
-                <label class="form__label" for="inputEmail">
-                  your e-mail
-                </label>
-              </div>
-              <div class="form__messenger form-item">
-                <textarea class="form__input textarea-form" id="inputmessenger" name="inputmessenger" rows="20"
-                  placeholder=" "></textarea>
-                <label class="form__label" for="inputmessenger">
-                  your message
-                </label>
-              </div>
-              <button class="from__btn_submit" id="btnSubmit" name="btnSubmit">
-                send message
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer" id="footer"></footer>
-  </div>
-
-  <!-- fontawesome -->
-  <script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
-  <!-- scripts -->
-  <script src="./index.js" type="module"></script>
-</body>
-
+		<!-- fontawesome -->
+		<script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
+		<!-- scripts -->
+		<script src="./index.js" type="module"></script>
+	</body>
 </html>
