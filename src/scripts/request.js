@@ -17,22 +17,22 @@ export const getMessengersData = async () => {
 		{
 			messengerName: 'facebook',
 			iconClassName: 'fab fa-facebook-f',
-			messengerLink: 'https://www.facebook.com/profile.php?id=100072407994592',
+			messengerLink: 'https://www.facebook.com/alkhimenok',
 		},
 		{
 			messengerName: 'instagram',
 			iconClassName: 'fab fa-instagram',
-			messengerLink: 'https://www.instagram.com/alkhimenok.kirill.leonidovich/',
+			messengerLink: 'https://www.instagram.com/alkhimenokk',
 		},
 		{
 			messengerName: 'twitter',
 			iconClassName: 'fab fa-twitter',
-			messengerLink: 'https://twitter.com/AlkhimenokKL',
+			messengerLink: 'https://twitter.com/alkhimenokk',
 		},
 		{
 			messengerName: 'linkedin',
 			iconClassName: 'fab fa-linkedin-in',
-			messengerLink: 'https://www.linkedin.com/in/kirill-alkhimenok-a58524220/',
+			messengerLink: 'https://www.linkedin.com/in/kirill-alkhimenok-a58524220',
 		},
 		{
 			messengerName: 'github',
