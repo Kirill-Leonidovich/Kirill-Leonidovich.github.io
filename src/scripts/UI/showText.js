@@ -4,7 +4,7 @@ export function goAnimation(textArea) {
   let from = 0
 
   animate({
-    duration: 5000,
+    duration: 3000,
     timing: linearTiming,
     draw: function(progress) {
       let result = (to - from) * progress + from;
